@@ -157,7 +157,7 @@ class AmazonProduct extends AmazonProductsCore
                 $i++;
             }
         }
-        
+
         //CompetitivePricing
         if ($xml->CompetitivePricing) {
             //CompetitivePrices
@@ -201,11 +201,13 @@ class AmazonProduct extends AmazonProductsCore
 
 
         //SalesRankings
-        if ($xml->SalesRankings) {
-            foreach ($xml->SalesRankings->children() as $x) {
-                foreach ($x->children() as $y) {
-                    $this->data['SalesRankings'][$x->getName()][$y->getName()] = (string)$y;
+        if ($xml->SalesRankings){
+            foreach($xml->SalesRankings->children() as $x){
+                $temp = array();
+                foreach($x->children() as $y){
+                    $temp[$y->getName()] = (string)$y;
                 }
+                $this->data['SalesRankings'][$x->getName()][] = $temp;
             }
         }
 
