@@ -12,9 +12,7 @@ This is **NOT** for Amazon Web Services (AWS) - Cloud Computing Services.
 
 ## Installation
 
-```
 Note: This is installation manual for [[sonnenglas/amazon-mws-laravel](https://github.com/sonnenglas/amazon-mws-laravel)]
-```
 
 1.  `composer require sonnenglas/laravel5-amazon-mws`
 
