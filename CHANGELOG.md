@@ -1,8 +1,12 @@
 # CHANGELOG
 
+### 2020-01-20 - Version 3.0.7
+
+* Backport. AmazonProductInfo fetchCategories fix backported from [[CPIGroup/phpAmazonMWS](https://github.com/CPIGroup/phpAmazonMWS)]
+
 ### 2020-01-19 - Version 3.0.6
 
-* Backport. ProductIngo SalesRankings fix backported from [[CPIGroup/phpAmazonMWS](https://github.com/CPIGroup/phpAmazonMWS)]
+* Backport. AmazonProduct SalesRankings fix backported from [[CPIGroup/phpAmazonMWS](https://github.com/CPIGroup/phpAmazonMWS)]
 
 ### 2020-01-19 - Version 3.0.5
 

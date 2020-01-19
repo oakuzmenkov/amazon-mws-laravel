@@ -92,6 +92,8 @@ class AmazonProductInfo extends AmazonProductsCore
                 unset($this->options[$op]);
             }
         }
+        //remove Category-specific name
+        unset($this->options['SellerSKU']);
     }
 
     /**
@@ -137,6 +139,8 @@ class AmazonProductInfo extends AmazonProductsCore
                 unset($this->options[$op]);
             }
         }
+            //remove Category-specific name
+            unset($this->options['ASIN']);
     }
 
     /**
@@ -423,20 +427,20 @@ class AmazonProductInfo extends AmazonProductsCore
     protected function prepareCategories()
     {
         include($this->env);
-        if (isset($THROTTLE_TIME_PRODUCTLIST)) {
+        if(isset($THROTTLE_TIME_PRODUCTLIST)) {
             $this->throttleTime = $THROTTLE_TIME_PRODUCTLIST;
         }
         $this->throttleGroup = 'GetProductCategories';
         unset($this->options['ExcludeMe']);
         unset($this->options['ItemCondition']);
-        if (array_key_exists('SellerSKUList.SellerSKU.1', $this->options)) {
+        if (array_key_exists('SellerSKUList.SellerSKU.1',$this->options)){
             $this->options['Action'] = 'GetProductCategoriesForSKU';
             $this->resetASINs();
-        } else {
-            if (array_key_exists('ASINList.ASIN.1', $this->options)) {
-                $this->options['Action'] = 'GetProductCategoriesForASIN';
-                $this->resetSKUs();
-            }
+            $this->options['SellerSKU'] = $this->options['SellerSKUList.SellerSKU.1'];
+        } else if (array_key_exists('ASINList.ASIN.1',$this->options)){
+            $this->options['Action'] = 'GetProductCategoriesForASIN';
+            $this->resetSKUs();
+            $this->options['ASIN'] = $this->options['ASINList.ASIN.1'];
         }
     }
 
