@@ -1,9 +1,12 @@
 # CHANGELOG
 
+### 2020-01-19 - Version 3.0.6
+
+* Backport. ProductIngo SalesRankings fix backported from [[CPIGroup/phpAmazonMWS](https://github.com/CPIGroup/phpAmazonMWS)]
+
 ### 2020-01-19 - Version 3.0.5
 
 * Forked from [[Oakuzmenkov/amazon-mws-laravel](https://github.com/Oakuzmenkov/amazon-mws-laravel)]
-* Backport. ProductIngo SalesRankings fix backported from [[CPIGroup/phpAmazonMWS](https://github.com/CPIGroup/phpAmazonMWS)]
 
 ### 2018-11-08 - Version 3.0.5
 

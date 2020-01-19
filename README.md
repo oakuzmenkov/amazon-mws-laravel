@@ -8,20 +8,20 @@ This is **NOT** for Amazon Web Services (AWS) - Cloud Computing Services.
 
 ## Fork
 
-* Forked from [[Oakuzmenkov/amazon-mws-laravel](https://github.com/Oakuzmenkov/amazon-mws-laravel)]
+* Forked from [[sonnenglas/amazon-mws-laravel](https://github.com/sonnenglas/amazon-mws-laravel)]
 
 ## Installation
 
 ```
-Note: This is installation manual for [[Oakuzmenkov/amazon-mws-laravel](https://github.com/Oakuzmenkov/amazon-mws-laravel)]
+Note: This is installation manual for [[sonnenglas/amazon-mws-laravel](https://github.com/sonnenglas/amazon-mws-laravel)]
 ```
 
-1.  `composer require Oakuzmenkov/laravel5-amazon-mws`
+1.  `composer require sonnenglas/laravel5-amazon-mws`
 
 2.  add the service provider to the providers array in config/app.php:
 
 ```
-Oakuzmenkov\AmazonMws\ServiceProvider::class,
+Sonnenglas\AmazonMws\ServiceProvider::class,
 ```
 
 There's no facades to add in config/app.php
@@ -36,9 +36,9 @@ without having to jump hurdles such as parameter URL formatting and token manage
 The general work flow for using one of the objects is this:
 
 1.  Create an object for the task you need to perform.
-2.  Load it up with parameters, depending on the object, using _set\_\_\_\__ methods.
-3.  Submit the request to Amazon. The methods to do this are usually named _fetch\_\_\_\__ or _submit\_\_\_\__ and have no parameters.
-4.  Reference the returned data, whether as single values or in bulk, using _get\_\_\_\__ methods.
+2.  Load it up with parameters, depending on the object, using \_set\_\_\_\_\_ methods.
+3.  Submit the request to Amazon. The methods to do this are usually named \_fetch\_\_\_\_\_ or \_submit\_\_\_\_\_ and have no parameters.
+4.  Reference the returned data, whether as single values or in bulk, using \_get\_\_\_\_\_ methods.
 5.  Monitor the performance of the library using the built-in logging system.
 
 Note that if you want to act on more than one Amazon store, you will need a separate object for each store.
@@ -55,7 +55,7 @@ without having to jump hurdles such as parameter URL formatting and token manage
 Here is an example of a function used to get all warehouse-fulfilled orders from Amazon updated in the past 24 hours:
 
 ```php
-use Oakuzmenkov\AmazonMws\AmazonOrderList;
+use Sonnenglas\AmazonMws\AmazonOrderList;
 
 function getAmazonOrders() {
     $amz = new AmazonOrderList("myStore"); //store name matches the array key in the config file
@@ -73,7 +73,7 @@ function getAmazonOrders() {
 This example shows a function used to send a previously-created XML feed to Amazon to update Inventory numbers:
 
 ```php
-use Oakuzmenkov\AmazonMws\AmazonOrderList;
+use Sonnenglas\AmazonMws\AmazonOrderList;
 
 function sendInventoryFeed($feed) {
     $amz = new AmazonFeed("myStore"); //store name matches the array key in the config file
