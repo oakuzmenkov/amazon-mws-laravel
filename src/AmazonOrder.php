@@ -1,4 +1,4 @@
-<?php namespace Sonnenglas\AmazonMws;
+<?php namespace Oakuzmenkov\AmazonMws;
 
 /**
  * Copyright 2013 CPI Group, LLC
@@ -270,7 +270,7 @@ class AmazonOrder extends AmazonOrderCore
         if (isset($xml->IsPremiumOrder)){
             $d['IsPremiumOrder'] = (string)$xml->IsPremiumOrder;
         }
-        
+
         $this->data = $d;
     }
 
@@ -673,10 +673,10 @@ class AmazonOrder extends AmazonOrderCore
     public function getShipServiceLevelCategory(){
         return $this->getShipmentServiceLevelCategory();
     }
-    
+
     /**
      * Returns the customized Checkout by Amazon (CBA) label of the Order.
-     * 
+     *
      * This method will return <b>FALSE</b> if the CBA label category has not been set yet.
      * @return string|boolean single value, or <b>FALSE</b> if label not set yet
      */
@@ -687,10 +687,10 @@ class AmazonOrder extends AmazonOrderCore
             return false;
         }
     }
-    
+
     /**
      * Returns an indication of whether or not the Order was shipped with the Amazon TFM service.
-     * 
+     *
      * This method will return <b>FALSE</b> if the Amazon TFM flag has not been set yet.
      * @return string|boolean single value, or <b>FALSE</b> if value not set yet
      */
@@ -701,10 +701,10 @@ class AmazonOrder extends AmazonOrderCore
             return false;
         }
     }
-    
+
     /**
      * Returns the status of an Order shipped using Amazon TFM.
-     * 
+     *
      * This method will return <b>FALSE</b> if the status has not been set yet.
      * Valid values for the status are...
      * <ul>
@@ -726,10 +726,10 @@ class AmazonOrder extends AmazonOrderCore
             return false;
         }
     }
-    
+
     /**
      * Returns the type of the order.
-     * 
+     *
      * This method will return <b>FALSE</b> if the type has not been set yet.
      * Valid values for the type are...
      * <ul>
@@ -745,7 +745,7 @@ class AmazonOrder extends AmazonOrderCore
             return false;
         }
     }
-    
+
     /**
      * Returns the timestamp of the earliest shipping date.
      *

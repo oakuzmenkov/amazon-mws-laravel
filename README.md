@@ -8,20 +8,20 @@ This is **NOT** for Amazon Web Services (AWS) - Cloud Computing Services.
 
 ## Fork
 
-* Forked from [[sonnenglas/amazon-mws-laravel](https://github.com/sonnenglas/amazon-mws-laravel)]
+* Forked from [[Oakuzmenkov/amazon-mws-laravel](https://github.com/Oakuzmenkov/amazon-mws-laravel)]
 
 ## Installation
 
 ```
-Note: This is installation manual for [[sonnenglas/amazon-mws-laravel](https://github.com/sonnenglas/amazon-mws-laravel)]
+Note: This is installation manual for [[Oakuzmenkov/amazon-mws-laravel](https://github.com/Oakuzmenkov/amazon-mws-laravel)]
 ```
 
-1.  `composer require sonnenglas/laravel5-amazon-mws`
+1.  `composer require Oakuzmenkov/laravel5-amazon-mws`
 
 2.  add the service provider to the providers array in config/app.php:
 
 ```
-Sonnenglas\AmazonMws\ServiceProvider::class,
+Oakuzmenkov\AmazonMws\ServiceProvider::class,
 ```
 
 There's no facades to add in config/app.php
@@ -55,7 +55,7 @@ without having to jump hurdles such as parameter URL formatting and token manage
 Here is an example of a function used to get all warehouse-fulfilled orders from Amazon updated in the past 24 hours:
 
 ```php
-use Sonnenglas\AmazonMws\AmazonOrderList;
+use Oakuzmenkov\AmazonMws\AmazonOrderList;
 
 function getAmazonOrders() {
     $amz = new AmazonOrderList("myStore"); //store name matches the array key in the config file
@@ -73,7 +73,7 @@ function getAmazonOrders() {
 This example shows a function used to send a previously-created XML feed to Amazon to update Inventory numbers:
 
 ```php
-use Sonnenglas\AmazonMws\AmazonOrderList;
+use Oakuzmenkov\AmazonMws\AmazonOrderList;
 
 function sendInventoryFeed($feed) {
     $amz = new AmazonFeed("myStore"); //store name matches the array key in the config file

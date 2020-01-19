@@ -1,4 +1,4 @@
-<?php namespace Sonnenglas\AmazonMws;
+<?php namespace Oakuzmenkov\AmazonMws;
 
 use Iterator;
 
@@ -703,10 +703,10 @@ class AmazonOrderItemList extends AmazonOrderCore implements Iterator
             return false;
         }
     }
-    
+
     /**
      * Returns the promotional discount for the specified entry.
-     * 
+     *
      * This method will return <b>FALSE</b> if the list has not yet been filled.
      * If an array is returned, it will have the fields <b>Amount</b> and <b>CurrencyCode</b>.
      * @param int $i [optional] <p>List index to retrieve the value from. Defaults to 0.</p>
@@ -746,10 +746,10 @@ class AmazonOrderItemList extends AmazonOrderCore implements Iterator
             return false;
         }
     }
-    
+
     /**
      * Returns invoice data for the specified item.
-     * 
+     *
      * This method will return <b>FALSE</b> if the list has not yet been filled.
      * The array for invoice data may have the following fields:
      * <ul>
@@ -768,10 +768,10 @@ class AmazonOrderItemList extends AmazonOrderCore implements Iterator
             return false;
         }
     }
-    
+
     /**
      * Returns the condition for the specified item.
-     * 
+     *
      * This method will return <b>FALSE</b> if the list has not yet been filled.
      * Possible values for the condition ID are...
      * <ul>
@@ -792,10 +792,10 @@ class AmazonOrderItemList extends AmazonOrderCore implements Iterator
             return false;
         }
     }
-    
+
     /**
      * Returns the subcondition for the specified item.
-     * 
+     *
      * This method will return <b>FALSE</b> if the list has not yet been filled.
      * Possible values for the subcondition ID are...
      * <ul>
@@ -824,10 +824,10 @@ class AmazonOrderItemList extends AmazonOrderCore implements Iterator
             return false;
         }
     }
-    
+
     /**
      * Returns the condition description for the specified item.
-     * 
+     *
      * This method will return <b>FALSE</b> if the list has not yet been filled.
      * @param int $i [optional] <p>List index to retrieve the value from. Defaults to 0.</p>
      * @return string|boolean single value, or <b>FALSE</b> if incorrect index
@@ -839,10 +839,10 @@ class AmazonOrderItemList extends AmazonOrderCore implements Iterator
             return false;
         }
     }
-    
+
     /**
      * Returns the earliest date in the scheduled delivery window for the specified item.
-     * 
+     *
      * This method will return <b>FALSE</b> if the list has not yet been filled.
      * @param int $i [optional] <p>List index to retrieve the value from. Defaults to 0.</p>
      * @return string|boolean single value, or <b>FALSE</b> if incorrect index
@@ -854,10 +854,10 @@ class AmazonOrderItemList extends AmazonOrderCore implements Iterator
             return false;
         }
     }
-    
+
     /**
      * Returns the latest date in the scheduled delivery window for the specified item.
-     * 
+     *
      * This method will return <b>FALSE</b> if the list has not yet been filled.
      * @param int $i [optional] <p>List index to retrieve the value from. Defaults to 0.</p>
      * @return string|boolean single value, or <b>FALSE</b> if incorrect index
@@ -869,7 +869,7 @@ class AmazonOrderItemList extends AmazonOrderCore implements Iterator
             return false;
         }
     }
-    
+
     /**
      * Iterator function
      * @return type
